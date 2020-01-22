@@ -5,9 +5,10 @@ GoAdmin projesi aşağıdaki parçalardan (modül) oluşmaktadır:
 
 | İsim | Fonksiyonu | Yolu |
 | :--- | :--- | :--- |
-| engine | Engine is the core module of GoAdmin. The function of this module is to use the web framework adapter to inject the mapping between the plugin's routing and controller methods into the framework. | ./engine/engine.go |
+| engine (motor) | Engine is the core module of GoAdmin. The function of this module is to use the web framework adapter to inject the mapping between the plugin's routing and controller methods into the framework. | ./engine/engine.go |
 | engine | Engine (Motor) parçası GoAdmin'in çekirdeğidir. Bu parçanın işlevi web çerçeve adaptörünü kullanarak eklentinin yönlendirme ve kontrol metodları arasında karşılıklı bir eşleştirme yapmaktır. | ./engine/engine.go |
 | adapter | The function of the adapter is to realize the mutual conversion between the context of the web framework and the context of GoAdmin. | ./adapter/adapter.go |
+| adapter (bağdaştırıcı) | Bağdaştırıcının işlevi web çerçevesi bağlamı (web framework context) ile GoAdmin bağlamı arasındaki karşılıklı dönüşümü gerçekleştirmektir.  | ./adapter/adapter.go |
 | context | Context is the context of a request, the record includes the routing parameters and method information of the request, the context will be passed to the method of the plugin | ./context/context.go |
 | plugin | Each plugin has its own routing and controller method. After receiving the context converted by the adapter, it is processed by the controller method and returned to the adapter and then output to the web framework. | ./plugins/plugins.go |
 | template | Template is the golang materialization corresponding to the front-end code, and the component parts corresponding to the front-end code, such as forms, rows, columns, etc., are instantiated as an interface of golang, so the html code of the component can be obtained by calling the interface method, and this function is provided to Plugin to call | ./template/template.go |
